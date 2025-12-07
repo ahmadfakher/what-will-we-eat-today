@@ -1,0 +1,371 @@
+/** General Styling Start */
+
+:root {
+
+    /* Colors */
+    --bg-color-1: #fff7ed;
+    --bg-color-2: #fffbeb;
+    --bg-color-3: #fefce8;
+    --star-color: #fdc700;
+    --prep-time-color: #ff6900;
+    --cook-time-color: #fb2c36;
+    --servings-color: #2b7fff;
+    --orange-bg: #ffedd4;
+    --orange-hover: #ffd7a8;
+    --orange-font-color: #f54a00;
+    --orange-font-color-rgb: 245, 74, 0;
+    --green-bg: #dcfce7;
+    --green-font: #008236;
+    --blue-bg: #dbeafe;
+    --blue-font: #1447e6;
+    --red-bg: #fef2f2;
+    --warning-card-head-color: #9f0712;
+    --warning-card-explain-color: #e7000b;
+    --nav-link-color: #6a7282;
+    --nav-link-hov-color: #364153;
+    --tips-border-color: #ffb900;
+    --tips-icon-color: #e17100;
+    --nurtrition-card-bg: #fbf9fa;
+    --yellow-bg: #fef9c2;
+    --yellow-font: #d08700;
+    --red-bg: #ffe2e2;
+    --pink-bg: #fce7f3;
+    --pink-font: #e60076;
+
+    /* Gradients */
+    --bg-gradient: linear-gradient(to bottom right, var(--bg-color-1) 0%, var(--bg-color-2) 50%, var(--bg-color-3) 100%);
+    --ingredients-card-gradient: linear-gradient(to bottom right, var(--bg-color-1), var(--bg-color-2));
+    --button-gradient: linear-gradient(to right, var(--prep-time-color), var(--cook-time-color));
+    --button-hover-gradient: linear-gradient(to right, var(--orange-font-color), var(--warning-card-explain-color));
+    --navbar-icon-gradient: linear-gradient(to bottom right, var(--prep-time-color), var(--cook-time-color));
+    ;
+
+    /* Sizes */
+    --rem-3-quarters: 0.75rem;
+    --rem-7-eighths: 0.875rem;
+    --rem-1-and-quarter: 1.25rem;
+    --rem-1-and-half: 1.5rem;
+    --rem-2: 2rem;
+    --rem-2-and-half: 2.5rem;
+    --rem-3: 3rem;
+    --rem-22: 22rem;
+    --rem-45: 40rem;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-image: var(--bg-gradient);
+}
+
+.star {
+    color: var(--star-color);
+}
+
+
+/* General Styling End */
+
+/** Navbar Styling Start */
+
+.brand-icon {
+    width: var(--rem-3);
+    height: var(--rem-3);
+    --bs-gradient: var(--navbar-icon-gradient);
+}
+
+.brand-desc {
+    font-size: var(--rem-3-quarters);
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+.navbar-toggler i {
+    transition: color 0.2s;
+}
+
+.navbar-toggler:hover i {
+    color: var(--orange-font-color);
+}
+
+.navbar button:focus:not(:focus-visible) {
+    box-shadow: none;
+}
+
+.nav-link:hover {
+    --bs-dark-rgb: var(--orange-font-color-rgb);
+    --bs-text-opacity: 1;
+}
+
+.profile-img {
+    width: var(--rem-2);
+    height: var(--rem-2);
+    --bs-primary-rgb: var(--orange-font-color-rgb);
+}
+
+/* Navbar Styling End */
+
+/** Image Styling Start */
+
+.recipe-img {
+    height: 400px;
+}
+
+.recipe-img img {
+    object-position: center;
+}
+
+/* Image Styling End */
+
+/** Rating Card Styling Start */
+
+.rating-card {
+    top: var(--rem-1-and-half);
+    left: var(--rem-1-and-half);
+}
+
+.rating {
+    font-size: var(--rem-7-eighths);
+}
+
+.review {
+    font-size: var(--rem-3-quarters);
+}
+
+.details {
+    bottom: var(--rem-1-and-half);
+    left: var(--rem-1-and-half);
+    right: var(--rem-1-and-half);
+}
+
+/* Rating Card Styling End */
+
+/** Recipe Details Styling Start */
+
+.details-card .fa-lg {
+    line-height: 1;
+}
+
+.details-card p:first-of-type {
+    font-size: var(--rem-3-quarters);
+}
+
+.details-card p:last-of-type {
+    font-size: var(--rem-7-eighths);
+}
+
+.details-card:first-child i {
+    color: var(--prep-time-color);
+}
+
+.details-card:nth-child(2) i {
+    color: var(--cook-time-color);
+}
+
+.details-card:last-child i {
+    color: var(--servings-color);
+}
+
+/* Recipe Details Styling End */
+
+/** Action Buttons Styling Start */
+
+.action-buttons div {
+    width: var(--rem-3);
+    height: var(--rem-3);
+    background-color: var(--orange-bg);
+    color: var(--orange-font-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-buttons div:hover {
+    background-color: var(--orange-hover);
+}
+
+/* Action Buttons Styling End */
+
+/** Details Styling Start */
+
+.categories div {
+    font-size: var(--rem-3-quarters);
+}
+
+.categories div:first-child {
+    background-color: var(--green-bg);
+    color: var(--green-font);
+}
+
+.categories div:last-child {
+    background-color: var(--blue-bg);
+    color: var(--blue-font);
+}
+
+.description {
+    font-size: var(--rem-7-eighths);
+}
+
+/* Details Styling End */
+
+/** Warning Card Styling Start */
+
+.warning-card {
+    background-color: var(--red-bg);
+    --bs-border-color: var(--cook-time-color);
+}
+
+.warning-card i {
+    color: var(--cook-time-color);
+}
+
+.warning-card div p:first-child {
+    color: var(--warning-card-head-color);
+    font-size: var(--rem-7-eighths);
+}
+
+.warning-card div p:last-child {
+    color: var(--warning-card-explain-color);
+    font-size: var(--rem-3-quarters);
+}
+
+/* Warning Card Styling End */
+
+/** Nav & Tabs Styling Start */
+
+.nav-link {
+    --bs-nav-link-font-size: var(--rem-3-quarters);
+    --bs-nav-link-color: var(--nav-link-color);
+}
+
+.nav-link:hover {
+    --bs-nav-link-hover-color: var(--nav-link-hov-color);
+}
+
+.nav-underline .categ.nav-link:hover:not(.active) {
+    border-bottom-color: transparent;
+}
+
+.nav-underline .nav-link.active {
+    --bs-nav-underline-link-active-color: var(--orange-font-color);
+}
+
+#ingredients {
+    --bs-gradient: var(--ingredients-card-gradient);
+}
+
+.item-no,
+.inst-no {
+    background-color: var(--prep-time-color);
+}
+
+.item-no {
+    width: var(--rem-1-and-half);
+    height: var(--rem-1-and-half);
+    font-size: var(--rem-3-quarters);
+}
+
+.tab-pane {
+    max-height: 22rem;
+}
+
+.inst-no {
+    width: calc(var(--rem-1-and-half)*2);
+    height: calc(var(--rem-1-and-half)*2);
+    font-size: var(--rem-1-and-quarter);
+}
+
+.tips-card {
+    background-color: var(--bg-color-2);
+    --bs-border-color: var(--tips-border-color);
+    color: var(--tips-icon-color);
+}
+
+.nutrition-name {
+    background-color: var(--nurtrition-card-bg);
+}
+
+.nutrition-data div {
+    width: var(--rem-2-and-half);
+    height: var(--rem-2-and-half);
+}
+
+.nutrition-data p {
+    font-size: var(--rem-3-quarters);
+}
+
+.nutrition-card:first-child .nutrition-data div {
+    background-color: var(--orange-bg);
+    color: var(--orange-font-color);
+}
+
+.nutrition-card:nth-child(2) .nutrition-data div {
+    background-color: var(--blue-bg);
+    color: var(--blue-font);
+}
+
+.nutrition-card:nth-child(3) .nutrition-data div {
+    background-color: var(--yellow-bg);
+    color: var(--yellow-font);
+}
+
+.nutrition-card:nth-child(4) .nutrition-data div {
+    background-color: var(--red-bg);
+    color: var(--warning-card-explain-color);
+}
+
+.nutrition-card:nth-child(5) .nutrition-data div {
+    background-color: var(--green-bg);
+    color: var(--green-font);
+}
+
+.nutrition-card:last-child .nutrition-data div {
+    background-color: var(--pink-bg);
+    color: var(--pink-font);
+}
+
+.refresh-button.btn {
+    --bs-gradient: var(--button-gradient);
+    scale: 1;
+    transition: all 0.2s;
+    font-size: var(--rem-7-eighths);
+}
+
+.refresh-button.btn:hover {
+    --bs-gradient: var(--button-hover-gradient);
+    scale: 1.05;
+}
+
+.tab-pane,
+.recipe-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--orange-font-color-rgb), 0.2) transparent;
+}
+
+/* Nav & Tabs Styling End */
+
+@media (min-width: 786px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 992px) {
+    html {
+        font-size: 20px;
+    }
+
+    .recipe-content {
+        max-height: var(--rem-45);
+        flex: 3;
+    }
+
+    .recipe-img {
+        height: inherit;
+        flex: 2;
+    }
+}
